@@ -125,8 +125,8 @@ body {
 .six .hat {
   position: absolute;
   width: 60px;
-  top: 20px;
-  left: 10%;
+  top: -40px;
+  left: 40%;
   /* transform: scale(0.1); */
 }
 
@@ -136,11 +136,11 @@ body {
 }
 
 .baloons img:nth-child(even) {
-  left: -10%;
+  left: 35%;
 }
 
 .baloons img:nth-child(odd) {
-  right: -10%;
+  right: 38%;
 }
 
 .baloons img:nth-child(3n + 0) {
