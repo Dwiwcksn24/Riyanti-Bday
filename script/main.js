@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const toggleButton = document.getElementById('toggleButton');
+
+    toggleButton.addEventListener('click', function () {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            toggleButton.innerText = 'Pause Music';
+        } else {
+            backgroundMusic.pause();
+            toggleButton.innerText = 'Play Music';
+        }
+    });
+});
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
