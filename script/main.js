@@ -1,17 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const toggleButton = document.getElementById('toggleButton');
-
-    toggleButton.addEventListener('click', function () {
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-            toggleButton.innerText = 'Pause Music';
-        } else {
-            backgroundMusic.pause();
-            toggleButton.innerText = 'Play Music';
-        }
-    });
-});
+<audio controls autoplay>
+  <source src="https://www.youtube.com/watch?v=jia3fhBQ8qI&list=RDjia3fhBQ8qI&start_radio=1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
