@@ -1,10 +1,4 @@
 {
-  <p><audio id="loop-limited" controls="controls" autoplay style="width: 6em;height:20px;"><source src="style/Keshi.mp3" type="audio/ogg" /><source src="style/Keshi" type="audio/mpeg" /></audio><br />
-<script>
-var loopLimit = 5;
-var loopCounter = 0;
-document.getElementById('loop-limited').addEventListener('ended', function(){if (loopCounter < loopLimit){this.currentTime = 0;this.play();loopCounter++;}
-}, false);</script></p>
   "greeting": "Hii",
   "name": "Riyanti",
   "greetingText": "I really love your name btw!",
