@@ -1,8 +1,8 @@
+// Import the data to customize and insert them into page
 <audio controls autoplay>
   <source src="https://www.youtube.com/watch?v=jia3fhBQ8qI&list=RDjia3fhBQ8qI&start_radio=1" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
-// Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
     .then(data => data.json())
