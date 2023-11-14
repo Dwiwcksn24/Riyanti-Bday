@@ -14,6 +14,10 @@ const fetchData = () => {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
         }
+$(document).on('click', function(){
+    document.getElementById("my_audio").play();
+    console.log('Shaadi me zaroor aana');
+});
 
         // Check if the iteration is over
         // Run amimation if so
