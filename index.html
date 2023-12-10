@@ -46,12 +46,84 @@
       </p>
     </div>
     <div class="six">
-      <img src="img/lydia2.png" alt="" class="lydia-dp" data-node-name="imagePath">
-      <img src="img/hat.svg" alt="" class="hat">
-      <div class="wish">
-        <h3 class="wish-hbd" data-node-name="wishHeading">Happy Birthday!</h3>
-        <h5 data-node-name="wishText">May the js.prototypes always be with you! ;)</h5>
-      </div>
+        <a href="#" class="btn">watch video</a>
+        <h3 class="wish-hbd" data-node-name="wishHeading">Selamat Hari Ibu 2023!</h3>
+        <h5 data-node-name="wishText">Aku Sayang Ibu</h5>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CwGbMYLjIpQ?si=KkUenjX-g__SLbxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    </div>
+        <div class="six">
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                
+                }
+            
+                body{
+                    min-height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #d6d2d2;
+                    
+                }
+                .btn{
+                    text-decoration: none;
+                    padding: 15px 40px;
+                    background-color: rgb(255,125,0);
+                    color: #fff;
+                    border-radius: 40px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: bold;
+                    box-shadow: 0 10px 40px rgb(255, 122, 0,0.4);
+            
+                }
+            
+                .video-container {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 99999;
+                    background-color: rgb(255, 122, 0,0.1);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.3s;
+                }
+                .video-container .close { 
+                    position: absolute;
+                    top: 10%;
+                    right: 25px;
+                    font: 20px;
+                    cursor: pointer;
+            
+                }
+                .video-container video{
+                    width: 90%;
+                    max-width: 800px;
+                    transform: scale(0);
+                    box-shadow: 0 20px rgba(0, 0, 0, 0.2);
+                    outline: none;
+                    transition: all 0.3s;
+            
+                }
+                .video-container.show{
+                    pointer-events: all;
+                    opacity: 1;
+            
+                } 
+                .video-container.show video{
+                    transform: scale(1);
+            
+                }
+            </style>
     </div>
     <div class="seven">
       <div class="baloons">
@@ -126,7 +198,26 @@
     </div>
   </div>
 </body>
+ <script>
+        const btn = document.querySelector('.btn');
+        const videoContainer = document.querySelector('.video-container');
 
+
+        const close = document.querySelector('.close');
+
+
+
+        btn.addEventListener('click',()=>{
+            videoContainer.classList.add('show');
+        })
+
+            close.addEventListener('click',()=>{
+            videoContainer.classList.remove('show');
+
+
+        }) 
+
+    </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script type="application/javascript" src="script/main.js"></script>
 
